@@ -1,0 +1,35 @@
+private sub mncolor_click()
+cdb.showcolor
+rtb.selcolor = cdb.color
+End sub
+private sub mnexit_click()
+End
+End sub
+private sub mnfont_click()
+cdb.Flags = cdlCFBoth or cdlCFLeffects
+cdb.showFont
+rtb.selFontName = cdb.FontName
+rtb.selFontSize = cdb.FontSize
+rtb.selBold = cdb.FontBold
+rtb.selItalic = cdb.FontItalic
+rtb.selUnderline = cdb.FontStrikethru
+End sub
+private sub mnnew_click()
+rtb.visible = True
+rtb.Text = ""
+End sub
+private sub mnopen_click()
+rtb.visible = True
+cdb.showopen
+rtb.LoadFile (cdb.FileName)
+End sub
+private sub mnsave_click()
+cdb.showsave
+rtb.saveFile (cdb.FileName)
+MsgBox ("FILE SAVED" & cdb.FileName)
+End sub
+
+
+
+
+

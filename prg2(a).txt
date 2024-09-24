@@ -1,0 +1,27 @@
+private sub command1_click()
+        Dim f,s,cnt,ans,n As Integer
+        n = val(Text1.Text)
+        ans = 0
+        f = 0
+        s = 1
+        List1.AddItem f
+        List1.AddItem s
+        cnt = 2
+        While (cnt < n)
+        ans = f + s
+        List1.AddItem ans
+        f = s
+        s = ans
+        cnt = cnt + 1
+        Wend
+End sub
+private sub command2_click()
+        List1.clear
+        Text = ""
+        End sub
+private sub command3_click()
+        End
+End sub
+
+
+

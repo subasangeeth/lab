@@ -1,0 +1,19 @@
+private sub clear_click()
+rtb =""
+End sub
+private sub cmdsave_click()
+cdb.showsave
+rtb.saveFile (cdb.Filename)
+MsgBox "File Saved"
+End sub
+private sub Dir1_change()
+File1.path = Dir1.path
+End sub
+private sub Drive1_change()
+Dir1.path = Drive1.Drive
+End sub
+private sub File1_click()
+rtb.LoadFile (File1.path & "/" & File1.FileName)
+End sub
+
+

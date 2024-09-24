@@ -1,0 +1,19 @@
+private sub command1_click()
+        Dim n,sum,cnt,rcm1 As Integer
+        n = Val(Text1.Text)
+        sum = 0
+        while (n>0)
+        sum = sum + (n mod 10)
+        n = n / 10
+        Wend
+        Text2.Text = sum
+End sub
+private sub command2_click()
+        Text1.Text = ""
+        Text2.Text = ""
+End sub
+
+
+
+
+

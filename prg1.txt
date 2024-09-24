@@ -1,0 +1,61 @@
+Dim Current As Double
+Dim Previous As Double
+Dim Choice As string
+Dim Result As Double
+private sub command1_click(Index As Integer)
+        Text1.Text=Text1.Text & Command1(Index).Caption
+        Current = Val(Text1.Text)
+End sub 
+private sub command2_click()
+        Text1.Text = ""
+        previous = current
+        current = 0
+        choice = "+"
+End sub
+private sub command3_click()
+        Text1.Text = ""
+        previous = current
+        current = 0
+        choice = "-"
+End sub
+private sub command4_click()
+        Text1.Text = ""
+        previous = current
+        current = 0
+        choice = "*"
+End sub
+private sub command5_click()
+        Text1.Text = ""
+        previous = current
+        current = 0
+        choice = "/"
+End sub
+private sub command6_click()
+        select case choice
+        case "+"
+        Result = previous + current
+        Text1.Text = Result
+        case "-"
+        Result = previous - current
+        Text1.Text = Result
+        case "*"
+        Result = previous * current
+        Text1.Text = Result
+        case "/"
+        Result = previous / current
+        Text1.Text = Result
+        End select
+        current = Result
+End sub
+private sub command7_click()
+        current = previous = 0
+        Text1.Text = ""
+        Text1.SetFocus
+End sub
+private sub command8_click()
+        current = -current
+        Text1.Text = current
+End sub
+
+
+
